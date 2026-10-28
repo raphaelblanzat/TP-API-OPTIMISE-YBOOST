@@ -36,8 +36,50 @@ Axes d'optimisation API : Filtrage à facettes (calcul rapide des comptages par 
   - Adaptation à une ou plusieurs plateformes (web, mobile, desktop).
   - Gestion des utilisateurs (connexion, inscription, personnalisation)
 
+## Arborescence actuelle
 
-
-
+```text
+Docu/
+└─ Yboost.pdf
+OPTIMISE/
+├─ public/
+├─ src/
+│  ├─ assets/
+│  │  ├─ hero.png
+│  │  ├─ react.svg
+│  │  └─ vite.svg
+│  ├─ components/
+│  │  └─ Layout.tsx
+│  ├─ data/
+│  │  ├─ enumData.ts
+│  │  └─ productsData.ts
+│  ├─ pages/
+│  │  ├─ AboutPage.tsx
+│  │  ├─ HomePage.tsx
+│  │  ├─ LoginPage.tsx
+│  │  ├─ NotFoundPage.tsx
+│  │  ├─ ProductDetailPage.tsx
+│  │  ├─ ProductsListPage.tsx
+│  │  ├─ RegisterPage.tsx
+│  │  └─ SearchPage.tsx
+│  ├─ types/
+│  │  ├─ enumType.ts
+│  │  └─ productType.ts
+│  ├─ App.tsx
+│  ├─ index.css
+│  └─ main.tsx
+├─ .gitignore
+├─ eslint.config.js
+├─ index.html
+├─ package-lock.json
+├─ package.json
+├─ README.md
+├─ tsconfig.app.json
+├─ tsconfig.json
+├─ tsconfig.node.json
+├─ vite.config.ts
+├─ dist/
+└─ node_modules/
+```
 
 
