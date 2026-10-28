@@ -1,78 +1,43 @@
-# React + TypeScript + Vite
+# Projet Developpement :
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Catalogue de Périphériques & Setups Hardware
 
-Currently, two official plugins are available:
+- Entité principale : Matériel informatique (souris, claviers, écrans, composants).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Auth & Gestion utilisateurs : Profils utilisateurs, création et sauvegarde de son "setup" personnalisé, avis et notes.
+- Recherche & Filtres :
+  - Recherche par marque, modèle ou capteur
+  - Filtres par catégorie de composant, connectivité (filaire/sans-fil)
+  - Caractéristiques techniques
+  - Plage de prix
 
-## React Compiler
+Axes d'optimisation API : Filtrage à facettes (calcul rapide des comptages par filtre), requêtes avec jointures indexées sur les spécifications, denormalisation pour la note moyenne
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
 
-Note: This will impact Vite dev & build performances.
-You can also try [the experimental native React Compiler support in plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md#rust-react-compiler) by using `compiler: true` in the plugin options instead of using the Babel plugin.
+## Tâches à Réaliser :
 
-## Expanding the ESLint configuration
+1. API Optimisé
+- Fonctionnalités :
+  - Conception de l'Api pour la gestion de Péripheriques
+  - Respect de la norme REST. (GET, POST, PUT, DELETE)
+  - Optimisation
+  de la vitesse de traitement des requêtes.
+  - Fiabilité des données fournies (consistance, exactitude).
+  - Gestion des utilisateurs (authentification, données utilisateur).
+  - Endpoint pour la recherche et la filtration des recettes.
+    - Rechercher un péripheriques par nom, composant, prix
+    - Filtrer par type de péripheriques (souris, casque ,clavier) ...
+    - Créer, modifier, suprimmer un péripheriques (CRUD)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+2. Interface Utilisateur 
+- Fonctionnalités :
+  - Recherche et visualisation des péripheriques.
+  - Interaction avec les péripheriques  (charactéristique, ajout aux favoris, partage).
+  - Adaptation à une ou plusieurs plateformes (web, mobile, desktop).
+  - Gestion des utilisateurs (connexion, inscription, personnalisation)
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
 
-```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
